@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVC Exemplo Node.JS</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>.container {
+      color:blueviolet;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-align: center;
+      font-style: italic;
+  }
+  .aga {
+  color: rgb(11, 81, 161);
+  font-size:xx-large;
+  font-style: oblique;
+
+  }
+
+  .pe {
+    text-align: left;
+  }
+
+  body {
+    background-color: #483D8B		;
+  }
+  </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="app.js"></script>
+
+    <div class="container">
+      <br/><br/><br/>
+      <h2> NEWS NEWS NEWS NEWS NEWS 🐱‍👤🐱‍👤 NEWS NEWS NEWS NEWS NEWS </h2>
+      <br/>
+      <% if (news.length > 0) { %>
+        <div class="row">
+          <% for(var i = 0; i < news.length; i++) {%>
+            <div class="col-md-12 jumbotron">
+          
+              <h4 class="aga"><%= news[i].titulo %><strong>Cientistas descobrem nova espécie de bactéria em águas profundas</strong></h4>
+              <p class="pe"><%= news[i].noticia %>Uma equipe internacional de pesquisadores anunciou a descoberta de uma nova espécie de bactéria em amostras de água coletadas nas profundezas do Oceano Pacífico. A bactéria, batizada de Marinobacter profundus, apresenta características únicas que a diferenciam de outras espécies já conhecidas, como a capacidade de sobreviver em condições extremas de pressão e temperatura.
+
+                A descoberta foi realizada durante uma expedição oceanográfica que durou vários meses e envolveu a coleta de milhares de amostras de água em diferentes profundidades. As análises genéticas e bioquímicas das amostras revelaram a presença de Marinobacter profundus, uma bactéria com um genoma extremamente complexo e uma variedade de enzimas capazes de degradar uma ampla gama de compostos orgânicos.
+                
+                Os cientistas acreditam que a descoberta de Marinobacter profundus pode ter importantes implicações para diversas áreas do conhecimento, como a biotecnologia, a medicina e a compreensão da origem da vida na Terra. As enzimas produzidas por essa bactéria podem ser utilizadas no desenvolvimento de novos medicamentos e processos industriais, enquanto o estudo de seu genoma pode fornecer pistas sobre a evolução da vida em ambientes extremos.</p>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
